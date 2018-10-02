@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
 public class CrmUser {
+
     @JsonProperty("FirstName")
     private String firstName;
 
