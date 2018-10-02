@@ -7,6 +7,8 @@ import com.crm.YellCRM.repository.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 import static java.lang.Integer.parseInt;
 
 @Service
@@ -22,6 +24,7 @@ public class CompanyImpl  {
             if(contact.isValidContactData()) {
                 Contacts contacts = new Contacts();
                 System.out.println("contact:" + contact);
+                contacts.setId(UUID.randomUUID().toString());
                 contacts.setAccount(contact.getAccount());
                 contacts.setAccountAddress(contact.getAccountAddress());
                 contacts.setZipCode(contact.getZipCode());
@@ -31,7 +34,7 @@ public class CompanyImpl  {
                 contacts.setContactLastName(contact.getContactLastName());
                 contacts.setEmailAddress(contact.getEmailAddress());
                 contacts.setTelephone(contact.getTelephone());
-                contacts.setAge(parseInt(contact.getAge()));
+                contacts.setAge((contact.getAge()));
                 contacts.setGender(contact.getGender());
                 contacts.setTitle(contact.getTitle());
                 contacts.setLeadSource(contact.getLeadSource());

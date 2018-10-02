@@ -174,7 +174,7 @@ public class Contact {
 
     public boolean isValidContactData(){
         return notEmpty(account) && notEmpty(accountAddress) && notEmpty(accountEmail) && notEmpty(emailAddress)
-                && notEmpty(contactFirstName) && notEmpty(contactLastName) && notEmpty(age) && isNumber(age);
+                && notEmpty(contactFirstName) && notEmpty(contactLastName) && notEmpty(age) && notEmpty(age);
     }
 
     private boolean notEmpty(String s){

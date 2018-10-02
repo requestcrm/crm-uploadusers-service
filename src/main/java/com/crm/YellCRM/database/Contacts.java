@@ -4,59 +4,57 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "CRMCONTACTS")
+@Table(name = "CONTACTS")
 public class Contacts implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
     @Column(name = "ID",unique=true,nullable = false)
-    private Integer id;
+    private String id;
 
-    @Column(name = "ACCOUNT",nullable = false)
+    @Column(name = "assigned_user_id",nullable = false)
     private String account;
 
-    @Column(name = "ACCOUNT_ADDRESS",nullable = false)
+    @Column(name = "primary_address_city",nullable = false)
     private String accountAddress;
 
-    @Column(name = "ZIP_CODE",nullable = false)
+    @Column(name = "primary_address_postalcode",nullable = false)
     private String zipCode;
 
-    @Column(name = "ACCOUNT_TELEPHONE",nullable = false)
+    @Column(name = "phone_work",nullable = false)
     private String accountTelephone;
 
-    @Column(name = "ACCOUNT_EMAIL",nullable = false)
+    @Column(name = "department",nullable = false)
     private String accountEmail;
 
-    @Column(name = "CONTACT_FIRST_NAME",nullable = false)
+    @Column(name = "first_name",nullable = false)
     private String contactFirstName;
 
-    @Column(name = "CONTACT_LAST_NAME",nullable = false)
+    @Column(name = "last_name",nullable = false)
     private String contactLastName;
 
-    @Column(name = "EMAIL_ADDRESS",nullable = false)
+    @Column(name = "salutation",nullable = false)
     private String emailAddress;
 
-    @Column(name = "TELEPHONE",nullable = false)
+    @Column(name = "phone_mobile",nullable = false)
     private String telephone;
 
-    @Column(name = "AGE",nullable = false)
-    private int age;
+    @Column(name = "assistant",nullable = false)
+    private String age;
 
-    @Column(name = "GENDER",nullable = false)
+    @Column(name = "description",nullable = false)
     private String gender;
 
-    @Column(name = "TITLE",nullable = false)
+    @Column(name = "title",nullable = false)
     private String title;
 
-    @Column(name = "LEAD_SOURCE",nullable = false)
+    @Column(name = "lead_source",nullable = false)
     private String leadSource;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public Contacts setId(Integer id) {
+    public Contacts setId(String id) {
         this.id = id;
         return this;
     }
@@ -142,11 +140,11 @@ public class Contacts implements Serializable {
         return this;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public Contacts setAge(int age) {
+    public Contacts setAge(String age) {
         this.age = age;
         return this;
     }
