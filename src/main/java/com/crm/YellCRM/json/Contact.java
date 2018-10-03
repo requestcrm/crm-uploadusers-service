@@ -6,105 +6,60 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 @JsonSerialize
 public class Contact {
 
-    @JsonProperty("Account")
-    private String account;
+    @JsonProperty("First Name")
+    private String firstName;
 
-    @JsonProperty("Account Address")
-    private String accountAddress;
-
-    @JsonProperty("Zip Code")
-    private String zipCode;
-
-    @JsonProperty("Account Telephone")
-    private String accountTelephone;
-
-    @JsonProperty("Account Email")
-    private String accountEmail;
-
-    @JsonProperty("Contact First Name")
-    private String contactFirstName;
-
-    @JsonProperty("Contact Last Name")
-    private String contactLastName;
+    @JsonProperty("Last Name")
+    private String lastName;
 
     @JsonProperty("Email Address")
     private String emailAddress;
 
-    @JsonProperty("Telephone")
-    private String telephone;
+    @JsonProperty("Phone Number")
+    private String phoneNumber;
 
-    @JsonProperty("Age")
-    private String age;
+    @JsonProperty("Customer Name")
+    private String customerName;
 
-    @JsonProperty("Gender")
-    private String gender;
+    @JsonProperty("Customer Email Address")
+    private String customerEmailAddress;
 
-    @JsonProperty("Title")
-    private String title;
+    @JsonProperty("Customer Address")
+    private String customerAddress;
 
-    @JsonProperty("Lead or Customer")
-    private String leadSource;
+    @JsonProperty("Customer Pin Code")
+    private String customerPinCode;
 
-    public String getAccount() {
-        return account;
+    @JsonProperty("Customer Telephone")
+    private String customerTelephone;
+
+    @JsonProperty("Custom Field 1 (Car Size)")
+    private String customField1;
+
+    @JsonProperty("Custom Field 2 (Car Year)")
+    private String customField2;
+
+    @JsonProperty("Custom Field 3 (Car Make)")
+    private String customField3;
+
+    @JsonProperty("Custom Field 4 (Car Model)")
+    private String customField4;
+
+    public String getFirstName() {
+        return firstName;
     }
 
-    public Contact setAccount(String account) {
-        this.account = account;
+    public Contact setFirstName(String firstName) {
+        this.firstName = firstName;
         return this;
     }
 
-    public String getAccountAddress() {
-        return accountAddress;
+    public String getLastName() {
+        return lastName;
     }
 
-    public Contact setAccountAddress(String accountAddress) {
-        this.accountAddress = accountAddress;
-        return this;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public Contact setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-        return this;
-    }
-
-    public String getAccountTelephone() {
-        return accountTelephone;
-    }
-
-    public Contact setAccountTelephone(String accountTelephone) {
-        this.accountTelephone = accountTelephone;
-        return this;
-    }
-
-    public String getAccountEmail() {
-        return accountEmail;
-    }
-
-    public Contact setAccountEmail(String accountEmail) {
-        this.accountEmail = accountEmail;
-        return this;
-    }
-
-    public String getContactFirstName() {
-        return contactFirstName;
-    }
-
-    public Contact setContactFirstName(String contactFirstName) {
-        this.contactFirstName = contactFirstName;
-        return this;
-    }
-
-    public String getContactLastName() {
-        return contactLastName;
-    }
-
-    public Contact setContactLastName(String contactLastName) {
-        this.contactLastName = contactLastName;
+    public Contact setLastName(String lastName) {
+        this.lastName = lastName;
         return this;
     }
 
@@ -117,75 +72,110 @@ public class Contact {
         return this;
     }
 
-    public String getTelephone() {
-        return telephone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public Contact setTelephone(String telephone) {
-        this.telephone = telephone;
+    public Contact setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
 
-    public String getAge() {
-        return age.trim();
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public Contact setAge(String age) {
-        this.age = age;
+    public Contact setCustomerName(String customerName) {
+        this.customerName = customerName;
         return this;
     }
 
-    public String getGender() {
-        return gender;
+    public String getCustomerEmailAddress() {
+        return customerEmailAddress;
     }
 
-    public Contact setGender(String gender) {
-        this.gender = gender;
+    public Contact setCustomerEmailAddress(String customerEmailAddress) {
+        this.customerEmailAddress = customerEmailAddress;
         return this;
     }
 
-    public String getTitle() {
-        return title;
+    public String getCustomerAddress() {
+        return customerAddress;
     }
 
-    public Contact setTitle(String title) {
-        this.title = title;
+    public Contact setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
         return this;
     }
 
-    public String getLeadSource() {
-        return leadSource;
+    public String getCustomerPinCode() {
+        return customerPinCode;
     }
 
-    public Contact setLeadSource(String leadSource) {
-        this.leadSource = leadSource;
+    public Contact setCustomerPinCode(String customerPinCode) {
+        this.customerPinCode = customerPinCode;
+        return this;
+    }
+
+    public String getCustomerTelephone() {
+        return customerTelephone;
+    }
+
+    public Contact setCustomerTelephone(String customerTelephone) {
+        this.customerTelephone = customerTelephone;
+        return this;
+    }
+
+    public String getCustomField1() {
+        return customField1;
+    }
+
+    public Contact setCustomField1(String customField1) {
+        this.customField1 = customField1;
+        return this;
+    }
+
+    public String getCustomField2() {
+        return customField2;
+    }
+
+    public Contact setCustomField2(String customField2) {
+        this.customField2 = customField2;
+        return this;
+    }
+
+    public String getCustomField3() {
+        return customField3;
+    }
+
+    public Contact setCustomField3(String customField3) {
+        this.customField3 = customField3;
+        return this;
+    }
+
+    public String getCustomField4() {
+        return customField4;
+    }
+
+    public Contact setCustomField4(String customField4) {
+        this.customField4 = customField4;
         return this;
     }
 
     @Override
     public String toString(){
-        return "Account="+account+
-                "\nAccountAddress="+accountAddress +
+        return "customerName="+customerName+
+                "\ncustomerAddress="+customerAddress +
                 "\nEmailAddress="+emailAddress +
-                "\nTitle="+title+
-                "\nGender="+gender+
-                "\nContact First Name"+contactFirstName;
+                "\nContact First Name"+firstName;
     }
 
     public boolean isValidContactData(){
-        return notEmpty(account) && notEmpty(accountAddress) && notEmpty(accountEmail) && notEmpty(emailAddress)
-                && notEmpty(contactFirstName) && notEmpty(contactLastName) && notEmpty(age) && notEmpty(age);
+        return notEmpty(customerName) && notEmpty(customerAddress) && notEmpty(emailAddress)&& notEmpty(firstName);
     }
 
     private boolean notEmpty(String s){
       return s != null && s.trim().length() > 0;
     }
 
-    private boolean isNumber(String s){
-        try {
-            Integer.parseInt(s);
-            return true;
-        }catch (NumberFormatException e){}
-        return false;
-    }
 }
