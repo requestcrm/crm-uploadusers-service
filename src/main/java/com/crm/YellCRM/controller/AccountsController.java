@@ -59,7 +59,7 @@ public class AccountsController {
     }
 
     @CrossOrigin
-    @RequestMapping( value = "/accounts", method = RequestMethod.GET)
+    @RequestMapping( value = "/crm/accounts", method = RequestMethod.GET)
     public List<Accounts> listAllAccounts(){
         return accountsRepository.findAll();
     }
