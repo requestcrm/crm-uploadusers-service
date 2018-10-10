@@ -63,4 +63,11 @@ public class AccountsController {
     public List<Accounts> listAllAccounts(){
         return accountsRepository.findAll();
     }
+
+    @CrossOrigin
+    @RequestMapping( value = "/ping", method = RequestMethod.GET)
+    public String ping(){
+        return "service is running ..";
+    }
+
 }
