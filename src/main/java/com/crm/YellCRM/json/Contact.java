@@ -33,16 +33,16 @@ public class Contact {
     @JsonProperty("Customer Telephone")
     private String customerTelephone;
 
-    @JsonProperty("Custom Field 1 (Car Size)")
+    @JsonProperty("Vehicle Size")
     private String customField1;
 
-    @JsonProperty("Custom Field 2 (Car Year)")
+    @JsonProperty("Vehicle Year")
     private String customField2;
 
-    @JsonProperty("Custom Field 3 (Car Make)")
+    @JsonProperty("Vehicle Make")
     private String customField3;
 
-    @JsonProperty("Custom Field 4 (Car Model)")
+    @JsonProperty("Vehicle Model")
     private String customField4;
 
     public String getFirstName() {
